@@ -1,0 +1,91 @@
+@import '../../style/utilities/mixins';
+.collapsibleTab {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    margin-top: 26px;
+    @include mobile {
+      margin-top: 20px;
+    }
+
+    &__label {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        cursor: pointer;
+        background-color: #ff6060;
+        padding: 13px 20px;
+        border-radius: 10px;
+        color: white;
+        text-align: left;
+        width: 100%;
+        border: none;
+        outline: none;
+        margin: 0;
+        z-index: 1;
+        font-size: 18px;
+
+        @include mobile {
+          font-size: 13px;
+        }
+
+    }
+
+    &__content {
+        background-color: #F7F7F7;
+        border-radius: 10px;
+        padding: 20px 20px;
+        margin-top: -10px;
+        z-index: 0;
+      }
+      &__content p {
+          color: #ff6060;
+          margin: 0;
+          font-size: 18px;
+          line-height: 142%;
+          font-weight: 400;
+          
+      }
+      &__content--li {
+        color: #ff6060;
+        margin: 10px 0px;
+        font-size: 18px;
+        font-weight: 400;
+        @include mobile {
+          font-size: 12px;
+          margin: 5px 0px;
+        }
+    }
+      &__title--arrow {
+        transform: rotate(0deg);
+        transition: transform 300ms;
+        margin-left: 0.5rem;
+        @include mobile {
+          width: 16px;
+        }
+      }
+
+      &__title--arrow.opened {
+        transform: rotate(180deg);
+
+      }
+
+      @keyframes rotate-animation {
+        0% {
+          transform: rotate(0deg);
+        }
+        100% {
+          transform: rotate(180deg);
+        }
+      }
+
+      @keyframes reverse-animation {
+        0% {
+          transform: rotate(180deg);
+        }
+        100% {
+          transform: rotate(0deg);
+        }
+      }
+      
+    }

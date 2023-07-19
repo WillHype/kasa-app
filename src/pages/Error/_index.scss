@@ -1,0 +1,29 @@
+@import '../../style/utilities/mixins';
+.error__container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color : #FF6060;
+}
+
+.error {
+    &__title {
+        font-size: 288px;
+        text-align: center;
+        margin-top: 186px;
+        margin-bottom: 66px;
+        @include mobile {
+            font-size: 96px;
+            margin-bottom: 0px;
+        }
+    }
+
+    &__subtitle {
+        font-size: 36px;
+        @include mobile {
+            font-size: 18px;
+            text-align: center;
+            padding: 0px 0px;
+        }
+    }  
+}

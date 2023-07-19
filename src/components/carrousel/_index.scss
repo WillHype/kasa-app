@@ -1,0 +1,59 @@
+@import "../../style/utilities/mixins" ;
+
+.container_carousel {
+    position: relative;
+    max-width: 1280px;
+    padding-left: 20px;
+    padding-right: 20px;
+    height: 415px;
+    border-radius: 25px;
+    margin: auto;
+    margin-top: 25px;
+    overflow: hidden;
+    @include mobile {
+        height: 255px;
+        margin-top: 0px;
+    }
+
+   .caroussel__img{
+        object-fit: cover;
+        width: 100%;
+        height: 415px;
+        border-radius: 25px;
+        @include mobile{
+            height: 255px;
+        }
+    }
+    .arrows-container{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        padding-right: 50px;
+        padding-left: 50px;
+        @include mobile {
+            padding-right: 23px;
+            padding-left: 23px;
+        }
+    }
+    .arrow{
+        cursor: pointer;
+        @include mobile {
+            height: 20px;
+        }
+    }
+    .slide--counter{
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        color: white;
+        font-size: 18px;
+        @include mobile {
+            display: none;
+        }
+    }
+    }

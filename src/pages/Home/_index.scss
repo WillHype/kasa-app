@@ -1,0 +1,26 @@
+@import '../../style/utilities/mixins';
+@media screen  and (max-width: 1490px) {
+  .headerImg  {
+      height: 110px;
+      margin-bottom: 20px;
+  }
+}
+
+.location__container {
+  background-color: #f6f6f6;
+  border-radius: 25px;
+  display: grid; 
+  grid-template-columns: 1fr 1fr 1fr; 
+  gap: 50px 60px; 
+  padding: 55px 50px;
+  margin-top: 40px;
+
+  @include mobile {
+    background-color: transparent;
+    padding: 0;
+    grid-gap: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(100%, 1fr));
+  }
+  
+  }
+  
